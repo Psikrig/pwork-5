@@ -193,8 +193,8 @@ namespace pract5
                 string path = "D:\\История заказов.txt";
                 if (pos == 1)
                 {
-                    File.Create(path);
-                    var n = new DateOnly();
+                    File.Create(path).Close();
+                    DateTime n = DateTime.Now;
                     File.WriteAllText(path, "Заказ от: " + n + "\n  итоговая цена:" + ((x[0] + x[2] + x[4] + x[5]) + x[1] + x[3]) + "\n итоговый заказ: форма: " + z[0] + ", размер: " + z[1] + ", вкус: " + z[2] + ", количество коржей: " + z[3] + ", глазурь: " + z[4] + ", декор: " + z[5]);
                 }
                 if (pos == 2)
